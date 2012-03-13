@@ -1,4 +1,4 @@
-# Foobar
+# square-general-middleware
 
 ## Run tests
 
