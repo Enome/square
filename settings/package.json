@@ -1,0 +1,13 @@
+{
+        "name": "square-settings",
+        "version" : "0.0.1",
+        "repository": { "type": "git", "url": "git://github.com/Enome/square" },
+        "description": "Get settings depending on the env",
+        "main": "src",
+        "author": "Geert Pasteels <twitter.com/enome>",
+        "keywords": [ "Settings" ],
+        "dependencies": {},
+        "devDependencies": {
+                "should": "*"
+        }
+}
