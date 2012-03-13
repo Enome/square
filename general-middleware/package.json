@@ -1,0 +1,14 @@
+{
+        "name": "square-general-middleware",
+        "version" : "0.0.1",
+        "repository": { "type": "git", "url": "git://github.com/Enome/square" },
+        "description": "General middleware for Express",
+        "main": "src",
+        "author": "Geert Pasteels <twitter.com/enome>",
+        "keywords": [ "Middleware", "Express" ],
+        "dependencies": {},
+        "devDependencies": {
+                "should": "*",
+                "express-recorder": "*" 
+        }
+}
