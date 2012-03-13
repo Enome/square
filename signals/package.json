@@ -1,0 +1,14 @@
+{
+        "name": "square-signals",
+        "version" : "0.0.1",
+        "repository": { "type": "git", "url": "git://github.com/Enome/square" },
+        "description": "Wrapper for Event Emitter",
+        "main": "src",
+        "author": "Geert Pasteels <twitter.com/enome>",
+        "keywords": [ "foobar" ],
+        "dependencies": { },
+        "devDependencies": {
+                "should": "*",
+                "sinon": "*"
+        }
+}
