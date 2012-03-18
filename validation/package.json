@@ -1,0 +1,16 @@
+{
+        "name": "square-validation",
+        "version" : "0.0.1",
+        "repository": { "type": "git", "url": "git://github.com/Enome/square" },
+        "description": "Validates and sanitizes objects. Has middleware for with express.js",
+        "main": "index",
+        "author": "Geert Pasteels <twitter.com/enome>",
+        "keywords": [ "validation", "express" ],
+        "dependencies": { 
+                "validator": "*"
+        },
+        "devDependencies": {
+                "should": "*",
+                "express-recorder": "*"
+        }
+}
