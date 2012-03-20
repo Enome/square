@@ -18,12 +18,16 @@ module.exports =
 
     (data, invalid, valid)->
 
-      try
-        check(data, msg).isInt()
-      catch e
-        return invalid e.message
+      if data
+        try
+          check(data, msg).isInt()
+        catch e
+          return invalid e.message
 
-      valid sanitize(data).toInt()
+        valid sanitize(data).toInt()
+
+      else
+        valid()
 
   decimal: (msg)->
 
@@ -41,7 +45,7 @@ module.exports =
 
     (data, invalid, valid)->
 
-      valid data.toString()
+      valid data?.toString()
 
   
   email: (msg)->

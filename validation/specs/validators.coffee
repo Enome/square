@@ -1,4 +1,5 @@
 { required, integer, string, email, compare, decimal } = require '../src/validators'
+should = require 'should'
 
 describe 'Validators', ->
 
@@ -52,6 +53,12 @@ describe 'Validators', ->
 
             data.should.eql 15
 
+        it 'returns undefined if the value is undefined', ->
+
+          integer() undefined, null, (data)->
+
+            should.not.exist data
+
 
   describe 'string', ->
 
@@ -62,6 +69,12 @@ describe 'Validators', ->
         string() 15, null, (data)->
 
           data.should.eql '15'
+      
+      it 'returns undefined if the value is undefined', ->
+
+        string() undefined, null, (data)->
+
+          should.not.exist data
 
 
   describe 'email', ->
