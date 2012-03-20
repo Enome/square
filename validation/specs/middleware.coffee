@@ -50,7 +50,7 @@ describe 'middleware', ->
 
       locals = validator: createLocalValidator(badCredentials)
 
-      recorder middleware.validate('form') , { body, locals }, (result)->
+      recorder middleware('form') , { body, locals }, (result)->
 
         result.eql
           locals:
@@ -70,7 +70,7 @@ describe 'middleware', ->
 
       locals = validator: createLocalValidator(goodCredentials)
 
-      recorder middleware.validate('form') , { body, locals }, (result)->
+      recorder middleware('form') , { body, locals }, (result)->
 
         result.eql
           locals:

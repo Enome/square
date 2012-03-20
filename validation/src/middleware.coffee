@@ -1,21 +1,19 @@
-module.exports =
+module.exports = (view)->
 
-  validate: (view)->
+  (req, res, next)->
 
-    (req, res, next)->
+    validator = res.locals().validator
 
-      validator = res.locals().validator
+    validator.validate
+      
+      valid: (data)->
 
-      validator.validate
-        
-        valid: (data)->
+        res.local 'validated_data', data
 
-          res.local 'validated_data', data
+        next()
 
-          next()
+      invalid: (errors)->
 
-        invalid: (errors)->
-
-          res.local 'form_model', req.body
-          res.local 'errors', errors
-          res.render view
+        res.local 'form_model', req.body
+        res.local 'errors', errors
+        res.render view
