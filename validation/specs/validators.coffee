@@ -14,6 +14,12 @@ describe 'Validators', ->
 
           error.should.eql 'String is empty'
 
+      it 'returns Array is empty error', ->
+
+        required() [], (error)->
+
+          error.should.eql 'Array is empty'
+
       it 'returns a custom error', ->
 
         required('ooga booga') '',  (error)->
