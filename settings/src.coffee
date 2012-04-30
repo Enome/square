@@ -17,7 +17,6 @@ module.exports =
 
   create: ->
 
-    this.general
     env_settings = this[process.env.NODE_ENV]
 
     extend this.general, env_settings

@@ -6,13 +6,13 @@ module.exports =
 
     (data, invalid, valid)->
 
-      if ( Array.isArray data ) and ( data.length is 0 )
+      if ( Array.isArray data )
+        if( data.length is 0 )
           return invalid msg or 'Array is empty'
       else
         try
           check(data, msg).notEmpty()
         catch e
-          console.log e
           return invalid e.message
 
       valid data

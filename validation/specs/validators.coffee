@@ -34,6 +34,12 @@ describe 'Validators', ->
 
           data.should.eql 'Hello? Yes, this is done.'
 
+      it 'returns the array', ->
+
+        required() [ 1,2,3 ], null, (data)->
+
+          data.should.eql [1,2,3]
+
 
     describe 'Integer', ->
 
